@@ -1,0 +1,168 @@
+.css-piano * {
+  margin:0px;
+  padding:0px;
+  list-style:none;
+  outline:none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.css-piano *:focus {
+	outline:none !important;
+  }
+
+
+
+
+  .css-piano{
+
+     /*------------MAKRA--------------------*/
+    --piano-color-top-line: #333;
+
+    --piano-color-white: #eee;
+    --piano-color-white-b: #ccc;
+    --piano-color-out-white: #ccc;
+    --piano-color-out-white-b: #aaa;
+    --piano-color-press-white: #999;
+    --piano-color-press-white-b: #777;
+    --piano-color-wait-white: #999;
+    --piano-color-wait-white-b: #777;
+
+    --piano-color-black: #222;
+    --piano-color-out-black: #555;
+    --piano-color-press-black: #444;
+    --piano-color-wait-black: #444;
+
+    /*--------------------------------------*/
+
+    --piano-label-color: rgba(0, 0, 0, 0.6);
+    --piano-out-label-color: rgba(255, 255, 255, 0.7);
+
+    --piano-white-key-def-color: var(--piano-color-white);
+    --piano-white-key-def-border-color: var(--piano-color-white-b);
+    --piano-white-key-def-shadow: 0 0.4em 0.3em rgba(0,0,0,0.4);
+
+    --piano-white-key-out-color: var(--piano-color-out-white);
+    --piano-white-key-out-border-color: var(--piano-color-out-white-b);
+
+    --piano-white-key-press-color: var(--piano-color-press-white);
+    --piano-white-key-press-border-color: var(--piano-color-press-white-b);
+
+    --piano-white-key-wait-color: var(--piano-color-wait-white);
+    --piano-white-key-wait-border-color: var(--piano-color-wait-white-b);
+
+    --piano-black-key-def-color: var(--piano-color-black);
+    --piano-black-key-out-color: var(--piano-color-out-black);
+    --piano-black-key-press-color: var(--piano-color-press-black);
+    --piano-black-key-wait-color: var(--piano-color-wait-black);
+  }
+  
+/* PIANO */
+
+.css-piano{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+/* RAMA*/
+.css-piano ul {
+  flex: 0 0 auto;
+  direction: rtl;
+  font-size: 0.5em;
+
+  border-style: solid;
+  border-color: var(--piano-color-top-line);
+  border-width: 0.8em 0 0.5em 0;
+}
+/* KLAWISZE OGÓŁNIE*/
+.css-piano-key-wrapper {
+  position: relative;  
+  list-style:none;
+  float:left;
+
+  width: 4em;
+  height: 20em;
+}
+
+/* BIAŁE KLAWISZE */
+.css-piano-key-white{
+  display:block;
+  position:relative;
+  height: 100%;
+
+  cursor: pointer;
+  will-change: border-color, background-color;
+
+  border-style: solid;
+  border-width: 0 1px 0 1px;
+  border-color: var(--piano-white-key-def-border-color);
+  background-color: var(--piano-white-key-def-color);
+}
+.css-piano-key-white.outrange{
+  border-color: var(--piano-white-key-out-border-color);
+  background-color: var(--piano-white-key-out-color);
+}
+.css-piano-key-white.pressed-key{
+  border-color: var(--piano-white-key-press-border-color);
+  background-color: var(--piano-white-key-press-color);
+}
+.css-piano-key-white:active, .css-piano-key-white.waiting{
+  border-color: var(--piano-white-key-wait-border-color);
+  background-color: var(--piano-white-key-wait-color);
+}
+
+
+/* ZNAKI KLAWISZY C */
+.css-piano-key-name{
+  position: relative;
+  left: 0.0em;
+  bottom: 1.7em;
+  font-size: 2em;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--piano-label-color);
+
+  pointer-events: none;
+  will-change: color;
+}
+.css-piano-key-white.outrange + .css-piano-key-name{
+  color: var(--piano-out-label-color);
+}
+.css-piano-key-white.pressed-key + .css-piano-key-name, .css-piano-key-white.waiting + .css-piano-key-name,
+.css-piano-key-white:active + .css-piano-key-name{
+  color: var(--piano-out-label-color);
+}
+
+
+/* CZARNE KLAWISZE */
+.css-piano-key-black {
+  position:absolute;
+  z-index:10;
+  top: 0;
+  left:-1.2em;
+  width: 2em;
+  height: 60%;
+  
+  cursor: pointer;
+  border-radius:0 0 0.4em 0.4em;
+
+  will-change: background-color;
+
+  background-color: var(--piano-black-key-def-color);
+}
+.css-piano-key-black.outrange{
+  background-color: var(--piano-black-key-out-color);
+}
+.css-piano-key-black.pressed-key {
+  background-color: var(--piano-black-key-press-color);
+}
+.css-piano-key-black:active, .css-piano-key-black.waiting {
+  background-color: var(--piano-black-key-wait-color);
+}
