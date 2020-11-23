@@ -17,6 +17,7 @@ Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym inst
 
 ## 🎓 Zdobyta bądź poszerzona wiedza
 * Projektowanie i implementacja responsywnych interfejsów użytkownika
+
 ## Interfejs graficzny
 ![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
 ![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%201.gif)
