@@ -22,4 +22,6 @@ Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym inst
 * Umiejętność zrozumienia i implementacji algorytmów matematycznych
 * Akademickie metody statystycznej analizy zebranych danych (wykresy pudełkowe, aproksymowanie za pomocą wielomianów, tabele, itp.)
 ## Interfejs graficzny
-![](https://github.com/am-portfolio/Praca-Inzynierska/blob/main/GUI.PNG)
+![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
+![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%201.gif)
+
