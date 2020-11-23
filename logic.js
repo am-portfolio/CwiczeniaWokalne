@@ -812,7 +812,16 @@ $(document).ready(function() {
 		//-----------URUCHOMIENIE OBSŁUGI GUZIKÓW-------------//
 
 		application();
-
+		
+		//#TODO: Sekcja pomocy
+		$('#help').click(function(){
+			showToast({
+				theme: 'warning',
+				title: 'TODO',
+				message: 'Funkcja nie została jeszcze zaimplementowana',
+				position: 'bottomCenter'
+			});
+		})
 
 		//-----------OBSŁUGA ZAPISYWANIA ZESTAWÓW-------------//
 
@@ -938,7 +947,6 @@ $(document).ready(function() {
 		//------------WCZYTANIE ZAPISANYCH USTAWIEŃ I ĆWICZEŃ--------------//
 
 		loadCookies();
-
 
 		//-----ODPOWIEDNIE POTRAKTOWANIE STARYCH I NOWYCH USEROW------//
 
@@ -1751,7 +1759,7 @@ var applicationAssets =
 		"basic": {
 			type: "basic",
 			name: "Prosta",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1767,7 +1775,7 @@ var applicationAssets =
 		"scale-fast": {
 			type: "basic",
 			name: "Skala (szybka)",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1785,7 +1793,7 @@ var applicationAssets =
 		"scale-slow": {
 			type: "basic",
 			name: "Skala (wolna)",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1803,7 +1811,7 @@ var applicationAssets =
 		"reaching": {
 			type: "basic",
 			name: "Sięgająca",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1822,7 +1830,7 @@ var applicationAssets =
 		"falling": {
 			type: "basic",
 			name: "Opadająca",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1836,7 +1844,7 @@ var applicationAssets =
 		"relaxing": {
 			type: "relaxing",
 			name: "Relaksująca",
-			description: "-paceholder-",
+			description: "-TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1860,7 +1868,7 @@ var applicationAssets =
 		"fireish": {
 			type: "relaxing",
 			name: "Ogniskowa",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1883,7 +1891,7 @@ var applicationAssets =
 		"wide": {
 			type: "hard",
 			name: "Szeroka",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1905,7 +1913,7 @@ var applicationAssets =
 		"birdish": {
 			type: "hard",
 			name: "Ćwierkająca",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1925,7 +1933,7 @@ var applicationAssets =
 		"full": {
 			type: "hard",
 			name: "Pełna",
-			description: "-paceholder-",
+			description: "TODO: Opis melodii ćwiczenia",
 			intro: 'audio/placeholder.mp3',
 			data: [ 
 				{notes : [0, 4, 7, -12], duration: 1.00,	volume: 0.7},
@@ -1950,31 +1958,31 @@ var applicationAssets =
 	syllables: {
 		"ma": {
 			name: "Ma-Ma",
-			description: "-paceholder-",
+			description: "TODO: Opis ćwiczenia",
 			example: 'audio/placeholder.mp3',
 			intro: 'audio/placeholder.mp3',
 		},
 		"by": {
 			name: "By-By",
-			description: "-paceholder-",
+			description: "TODO: Opis ćwiczenia",
 			example: 'audio/placeholder.mp3',
 			intro: 'audio/placeholder.mp3',
 		},
 		"mm": {
 			name: "Mm-Mm",
-			description: "-paceholder-",
+			description: "TODO: Opis ćwiczenia",
 			example: 'audio/placeholder.mp3',
 			intro: 'audio/placeholder.mp3',
 		},
 		"br": {
 			name: "Brrr",
-			description: "-paceholder-",
+			description: "TODO: Opis ćwiczenia",
 			example: 'audio/placeholder.mp3',
 			intro: 'audio/placeholder.mp3',
 		},
 		"ni": {
 			name: "Ni-Ni",
-			description: "-paceholder-",
+			description: "TODO: Opis ćwiczenia",
 			example: 'audio/placeholder.mp3',
 			intro: 'audio/placeholder.mp3',
 		},
@@ -1988,8 +1996,8 @@ var applicationAssets =
 			data: []
 		},
 		{
-			name: "Zestaw Herkulesa",
-			description: '-paceholder-',
+			name: "Gotowy zestaw 1",
+			description: 'TODO: Opis zestawu ćwiczeń',
 			data: [ 
 				{melody : "basic", 			syllable: "ma"},
 				{melody : "basic", 			syllable: "ni"},
@@ -1999,8 +2007,8 @@ var applicationAssets =
 			]
 		},
 		{
-			name: "Zestaw Hefajstos",
-			description: '-paceholder-',
+			name: "Gotowy zestaw 2",
+			description: 'TODO: Opis zestawu ćwiczeń',
 			data: [ 
 				{melody : "basic", 			syllable: "mm"},
 				{melody : "basic", 			syllable: "br"},
@@ -2010,8 +2018,8 @@ var applicationAssets =
 			]
 		},
 		{
-			name: "Zestaw Judasza",
-			description: 'Zdradziecko prosty.',
+			name: "Gotowy zestaw 3",
+			description: 'TODO: Opis zestawu ćwiczeń',
 			data: [ 
 				{melody : "basic", 			syllable: "br"},
 				{melody : "basic", 			syllable: "ni"},
