@@ -16,11 +16,7 @@ Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym inst
 * **Adobe Photoshop**
 
 ## 🎓 Zdobyta bądź poszerzona wiedza
-* Algorytmy klasteryzacji danych (np. algorytm k-średnich)
-* Algorytmy interpolacji danych (metoda najbliższego sąsiada, interpolacja dwuliniowa)
-* Analiza obrazów cyfrowych w różnych przestrzeniach barw i za pomocą różnych wskaźników jakości (RGB, sRGB, CIE XYZ, RMSE, PSNR, MAE, DE76, DSCSI, HPSI)
-* Umiejętność zrozumienia i implementacji algorytmów matematycznych
-* Akademickie metody statystycznej analizy zebranych danych (wykresy pudełkowe, aproksymowanie za pomocą wielomianów, tabele, itp.)
+* Projektowanie i implementacja responsywnych interfejsów użytkownika
 ## Interfejs graficzny
 ![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
 ![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%201.gif)
