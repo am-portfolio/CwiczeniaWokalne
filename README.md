@@ -1,4 +1,4 @@
-# Ćwiczenia Wokalne(2018)
+# Ćwiczenia Wokalne (2018)
 **Autor**: Aron Mandrella
 
 ## Interfejs graficzny (widok mobilny)
