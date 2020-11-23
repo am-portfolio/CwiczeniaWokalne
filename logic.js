@@ -813,6 +813,15 @@ $(document).ready(function() {
 
 		application();
 		
+		//#TODO: Sekcja pomocy
+		$('#help').click(function(){
+			showToast({
+				theme: 'warning',
+				title: 'TODO',
+				message: 'Funkcja nie została jeszcze zaimplementowana',
+				position: 'bottomCenter'
+			});
+		})
 
 		//-----------OBSŁUGA ZAPISYWANIA ZESTAWÓW-------------//
 
