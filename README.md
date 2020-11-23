@@ -1,4 +1,6 @@
 # Ćwiczenia Wokalne (2018)
+[![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/GitHub_Thumbnail.png)](https://github.com/am-portfolio/CwiczeniaWokalne)
+
 **Autor**: Aron Mandrella
 
 ## Interfejs graficzny (widok mobilny)
