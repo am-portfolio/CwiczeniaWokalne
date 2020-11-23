@@ -1,4 +1,4 @@
-# Ćwiczenia Wokalne (2018)
+# Ćwiczenia Wokalne (2019)
 
 [![](https://github.com/aronmandrella/CwiczeniaWokalne/blob/main/GitHub_Thumbnail.png)](https://github.com/aronmandrella/CwiczeniaWokalne)
 
