@@ -1,0 +1,260 @@
+.css-piano * {
+  margin:0px;
+  padding:0px;
+  list-style:none;
+  outline:none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.css-piano *:focus {
+	outline:none !important;
+  }
+
+
+
+
+  .css-piano{
+
+     /*------------MAKRA--------------------*/
+    --piano-color-top-line: #333;
+    --piano-color-white-1: #eee;
+    --piano-color-white-2: #ddd;
+    --piano-color-white-b: #ccc;
+    --piano-color-out-white-1: #ccc;
+    --piano-color-out-white-2: #bbb;
+    --piano-color-out-white-b: #aaa;
+    --piano-color-press-white-1: #999;
+    --piano-color-press-white-2: #888;
+    --piano-color-press-white-b: #777;
+    --piano-color-black-1: #222;
+    --piano-color-black-2: #333;
+    --piano-color-black-3: #555;
+    --piano-color-out-black-1: #555;
+    --piano-color-out-black-2: #666;
+    --piano-color-out-black-3: #777;
+    --piano-color-press-black-1: #444;
+    --piano-color-press-black-2: #555;
+    --piano-color-press-black-3: #666;
+
+    --piano-color-wait-white-1: #999;
+    --piano-color-wait-white-2: #888;
+    --piano-color-wait-white-b: #777;
+    --piano-color-wait-black-1: #444;
+    --piano-color-wait-black-2: #555;
+    --piano-color-wait-black-3: #666;
+
+    /*--------------------------------------*/
+
+    --piano-label-color: rgba(0, 0, 0, 0.6);
+    --piano-out-label-color: rgba(255, 255, 255, 0.7);
+
+    --piano-white-key-def-color: var(--piano-color-white-1);
+    --piano-white-key-def-gradient: -30deg, var(--piano-color-white-2), var(--piano-color-white-1);
+    --piano-white-key-def-border: 0.1em solid var(--piano-color-white-b);
+    --piano-white-key-def-shadow: 0 0.4em 0.3em rgba(0,0,0,0.5), 0 0.7em 1em rgba(0,0,0,0.2);
+
+    --piano-white-key-out-color: var(--piano-color-out-white-1);
+    --piano-white-key-out-gradient: -30deg, var(--piano-color-out-white-2),var(--piano-color-out-white-1);
+    --piano-white-key-out-border: 0.1em solid var(--piano-color-out-white-b);
+
+    --piano-white-key-press-color: var(--piano-color-press-white-1);
+    --piano-white-key-press-gradient: -30deg, var(--piano-color-press-white-2),var(--piano-color-press-white-1);
+    --piano-white-key-press-border: 0.1em solid var(--piano-color-press-white-b);
+    --piano-white-key-press-side-shadow-color: rgba(0,0,0,0.1);
+
+    --piano-black-key-def-color: var(--piano-color-black-1);
+    --piano-black-key-def-gradient: -20deg, var(--piano-color-black-2), var(--piano-color-black-1), var(--piano-color-black-2);
+    --piano-black-key-def-border-color: var(--piano-color-black-3) var(--piano-color-black-2) var(--piano-color-black-1) var(--piano-color-black-3);
+    --piano-black-key-def-shadow: inset 0 -0.1em 0.2em rgba(255,255,255,0.4),0 0.2em 0.3em rgba(0,0,0,0.4);
+
+    --piano-black-key-out-color: var(--piano-color-out-black-1);
+    --piano-black-key-out-gradient: -20deg,var(--piano-color-out-black-2), var(--piano-color-out-black-1), var(--piano-color-out-black-2);
+    --piano-black-key-out-border-color: var(--piano-color-out-black-3) var(--piano-color-out-black-2) var(--piano-color-out-black-1) var(--piano-color-out-black-3);
+    --piano-black-key-out-shadow: inset 0 -0.1em 0.2em rgba(255,255,255,0.2),0 0.2em 0.3em rgba(0,0,0,0.2);
+
+    --piano-black-key-press-color: var(--piano-color-press-black-1);
+    --piano-black-key-press-gradient: -20deg, var(--piano-color-press-black-2), var(--piano-color-press-black-1), var(--piano-color-press-black-2);
+    --piano-black-key-press-border-color: var(--piano-color-press-black-3) var(--piano-color-press-black-2) var(--piano-color-press-black-1) var(--piano-color-press-black-3);
+    --piano-black-key-press-shadow: inset 0 -0.1em 0.1em rgba(255,255,255,0.4),0 0.1em 0 rgba(0,0,0,0.8),0 0.2em 0.2em rgba(0,0,0,0.4),0 -0.1em 0 #000;
+
+
+    --piano-white-key-wait-color: var(--piano-color-wait-white-1);
+    --piano-white-key-wait-gradient: -30deg, var(--piano-color-wait-white-2),var(--piano-color-wait-white-1);
+    --piano-white-key-wait-border: 0.1em solid var(--piano-color-wait-white-b);
+    --piano-white-key-wait-side-shadow-color: rgba(0,0,0,0.1);
+
+    --piano-black-key-wait-color: var(--piano-color-wait-black-1);
+    --piano-black-key-wait-gradient: -20deg, var(--piano-color-wait-black-2), var(--piano-color-wait-black-1), var(--piano-color-wait-black-2);
+    --piano-black-key-wait-border-color: var(--piano-color-wait-black-3) var(--piano-color-wait-black-2) var(--piano-color-wait-black-1) var(--piano-color-wait-black-3);
+    --piano-black-key-wait-shadow: inset 0 -0.1em 0.1em rgba(255,255,255,0.4),0 0.1em 0 rgba(0,0,0,0.8),0 0.2em 0.2em rgba(0,0,0,0.4),0 -0.1em 0 #000;
+  }
+  
+/* PIANO */
+
+.css-piano{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+/* RAMA*/
+.css-piano ul {
+  flex: 0 0 auto;
+  direction: rtl;
+  font-size: 0.5em;
+  border: 0.5em solid var(--piano-color-top-line);
+  border-width: 0.8em 0 0 0;
+}
+/* KLAWISZE OGÓŁNIE*/
+.css-piano-key-wrapper {
+  position: relative;  
+  list-style:none;
+  float:left;
+
+  width: 4em;
+}
+
+/* BIAŁE KLAWISZE */
+.css-piano-key-white{
+  display:block;
+
+  border: var(--piano-white-key-def-border);
+  border-radius:0 0 0.3em 0.3em;
+
+  -webkit-box-shadow: var(--piano-white-key-def-shadow);
+  -moz-box-shadow: var(--piano-white-key-def-shadow);
+  box-shadow: var(--piano-white-key-def-shadow);
+  background: var(--piano-white-key-def-color);
+  background: linear-gradient(var(--piano-white-key-def-gradient));
+
+  cursor: pointer;
+  height: 21em;
+}
+.css-piano-key-white.outrange{
+  border: var(--piano-white-key-out-border);
+  background: var(--piano-white-key-out-color);
+  background: linear-gradient(var(--piano-white-key-out-gradient));
+}
+.css-piano-key-white.pressed-key{
+  position:relative;
+  height: 20.6em;
+  border: var(--piano-white-key-press-border);
+  background: var(--piano-white-key-press-color);
+  background: linear-gradient(var(--piano-white-key-press-gradient));
+}
+.css-piano-key-white:active, .css-piano-key-white.waiting{
+  position:relative;
+  height: 20.6em;
+  border: var(--piano-white-key-wait-border);
+  background: var(--piano-white-key-wait-color);
+  background: linear-gradient(var(--piano-white-key-wait-gradient));
+}
+
+.css-piano-key-name{
+  pointer-events: none;
+  
+  color: var(--piano-label-color);
+  position: relative;
+  left: 0.0em;
+  bottom: 1.5em;
+  font-size: 2em;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.css-piano-key-white.outrange + .css-piano-key-name{
+  color: var(--piano-out-label-color);
+}
+.css-piano-key-white.pressed-key + .css-piano-key-name, .css-piano-key-white.waiting + .css-piano-key-name,
+.css-piano-key-white:active + .css-piano-key-name{
+  color: var(--piano-out-label-color);
+}
+
+/* CIENIE NA BIAŁYCH KLAWISZACH */
+.css-piano-key-white:active:before, .css-piano-key-white.pressed-key:before, .css-piano-key-white.waiting:before {
+  content:"";
+  position:absolute;
+  width: 0;
+  height: 0;
+  left:0;
+  top:0;
+  border-width: 20.6em 0.5em 0;
+  border-style:solid;
+  border-color:transparent transparent transparent var(--piano-white-key-press-side-shadow-color);
+}
+.css-piano-key-white:active:after, .css-piano-key-white.pressed-key:after, .css-piano-key-white.waiting:after {
+  content:"";
+  position:absolute;
+  width:0;
+  height:0;
+  right:0;
+  top:0;
+  border-width: 20.6em 0.5em 0;
+  border-style:solid;
+  border-color:transparent var(--piano-white-key-press-side-shadow-color) transparent transparent;
+}
+
+
+/* CZARNE KLAWISZE */
+.css-piano-key-black {
+  position:absolute;
+  z-index:10;
+  top: 0;
+  left:-1.2em;
+  width: 2em;
+  height: 12.0em;
+
+  background: var(--piano-black-key-def-color);
+  background: linear-gradient(var(--piano-black-key-def-gradient));
+  
+  border-width: 0.1em 0.2em 0.7em;
+  border-style: solid;
+  border-color: var(--piano-black-key-def-border-color);
+
+  border-radius:0 0 0.2em 0.2em;
+
+  -webkit-box-shadow: var(--piano-black-key-def-shadow);
+  -moz-box-shadow: var(--piano-black-key-def-shadow);
+  box-shadow: var(--piano-black-key-def-shadow);
+
+  cursor: pointer;
+}
+.css-piano-key-black.outrange{
+  background: var(--piano-black-key-out-color);
+  background:linear-gradient(var(--piano-black-key-out-gradient));
+
+  border-color: var(--piano-black-key-out-border-color);
+  -webkit-box-shadow: var(--piano-black-key-out-shadow);
+  -moz-box-shadow: var(--piano-black-key-out-shadow);
+  box-shadow: var(--piano-black-key-out-shadow);
+}
+
+.css-piano-key-black.pressed-key {
+  border-bottom-width: 0.2em;
+  height: 12.3em;
+
+  background: var(--piano-black-key-press-color);
+  background: linear-gradient(var(--piano-black-key-press-gradient));
+
+  border-color: var(--piano-black-key-press-border-color);
+  -webkit-box-shadow:var(--piano-black-key-press-shadow);
+  -moz-box-shadow:var(--piano-black-key-press-shadow);
+  box-shadow:var(--piano-black-key-press-shadow);
+}
+.css-piano-key-black:active, .css-piano-key-black.waiting {
+  border-bottom-width: 0.2em;
+  height: 12.3em;
+
+  background: var(--piano-black-key-wait-color);
+  background: linear-gradient(var(--piano-black-key-wait-gradient));
+
+  border-color: var(--piano-black-key-wait-border-color);
+  -webkit-box-shadow:var(--piano-black-key-wait-shadow);
+  -moz-box-shadow:var(--piano-black-key-wait-shadow);
+  box-shadow:var(--piano-black-key-wait-shadow);
+}

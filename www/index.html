@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<!-- ......................... PODSTAWOWE META INFORMACJE ......................... -->
+
+	<!-- USTAWIENIA -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+	
+	<!-- OPIS -->
+	<title>Ćwiczenia Wokalne - Rozgrzej głos, poszerz skalę.</title>
+	<meta name="description" content="Dopiero się uczysz, a może śpiewasz zawodowo? Dzięki tej aplikacji dopasuj ćwiczenia wokalne pod własne potrzeby. Ty decydujesz co i jak chcesz ćwiczyć.">
+	<meta name="keywords" content="ćwiczenia wokalne, rozgrzekwa wokalna, rozśpiewka, śpiew, wokal, nauka">
+	<meta name="author" content="Aron Mandrella">
+
+	<!-- KOLOR PASKA I IKONA -->
+	<link rel="icon" href="favicon.ico">
+	<meta name="theme-color" content="#0a0c0f">
+	<meta name="msapplication-navbutton-color" content="#0a0c0f">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0a0c0f">
+
+	<!-- INFORMACJE DLA FACEBOOKA-->
+	<meta property="og:locale" content="pl_PL">
+	<meta property="og:image" content="https://www.cwiczeniawokalne.pl/thumbnail.png"/>
+	<meta property="og:site_name" content="CwiczeniaWokalne.pl">
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.cwiczeniawokalne.pl/" />
+	<meta property="og:title" content="Ćwiczenia Wokalne - Rozgrzej głos, poszerz skalę." />
+	<meta property="og:description" content="Dopiero się uczysz, a może śpiewasz zawodowo? Dzięki tej aplikacji dopasuj ćwiczenia wokalne pod własne potrzeby. Ty decydujesz co i jak chcesz ćwiczyć." />
+
+
+	<!-- ......................... FONTY I FONTELLO ......................... -->
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext" rel="stylesheet"> 
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+	<!-- ......................... STYLE DODATKOWYCH BIBLIOTEK ......................... -->
+
+	<link rel="stylesheet" href="libs/normalize.css?v38">
+	<!-- noUiSlider -->	
+	<link rel="stylesheet" href="libs/nouislider.css?v38">
+	<!-- iOsCheckbox -->	
+	<link rel="stylesheet" href="libs/el-checkbox.css?v38">
+	<!-- Toast -->
+	<link rel="stylesheet" href="libs/iziToast.css?v38">
+	<!-- Alerty -->
+	<link rel="stylesheet" href="libs/sweetalert2.css?v38">
+	<!-- Animacje -->
+	<link rel="stylesheet" href="libs/animate.css?v38">
+
+
+	<!-- ......................... STYLE WŁASNYCH BIBLIOTEK ......................... -->
+
+	<!-- Pozioma Lista Netflixowa -->
+	<link rel="stylesheet" href="include/horizontalScrollList.css?v38">
+	<!-- Wirtualne pianino -->
+	<link rel="stylesheet" href="include/css-piano.css?v38">
+	<!-- Logo jako WebFont -->
+	<link rel="stylesheet" href="webfonts/am-logo.css?v38">
+
+
+	<!-- ......................... STYLE STRONY ......................... -->
+
+	<link rel="stylesheet" href="style.css?v38">
+</head>
+
+<body>
+	<!-- EKRAN ŁADOWANIA -->
+	<div class="loading-screen" id="loading-screen">
+		<div class="loading-container">
+			<div class="title" id="page-name"><!-- NAZWA STRONY --></div>
+			<div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+			<div class="message" id="please-wait"><!-- INFORMACJA O WCZYTYWANIU DANYCH --></div>
+		</div>
+	</div>	
+
+	<!-- TŁO DLA ALERTÓW (BY ZAPOBEC MIGANIU) -->
+	<div id="alert-background"></div>
+
+	<main id="GUI" style="display: none">
+
+		<!-- ............. GÓRNY PASEK Z GUZIKAMI PLAY, PAUSE ITD ............. -->
+
+		<div class="sticky">
+			<div class="navigation">
+				<nav>
+					<ul>
+						<li><a href="#application" class="active"><i class="fas fa-home"></i><!-- TYTUŁ GUZIKA --></a></li>
+						<li><a href="#exercises-picker"><i class="fas fa-toolbox"></i><!-- TYTUŁ GUZIKA --></a></li>
+						<li><a href="#settings"><i class="fas fa-cog"></i><!-- TYTUŁ GUZIKA --></a></li>
+						<li><a id="help"><i class="fas fa-question-circle"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="toolbars-container">
+				<div class="toolbar">
+					<button class="delayed-button clickable" type="button" data-action="play"><i class="fas fa-play"></i></button>
+					<button class="delayed-button play-mode" type="button" data-action="pause" style="display: none"><i class="fas fa-pause"></i></button>
+					<button class="delayed-button clickable play-pause-mode" type="button" data-action="stop"><i class="fas fa-stop"></i></button>
+					<div id="bpm-noUiSlider-wrapper"><div id="bpm-noUiSlider" class="noUi-thin"></div></div>
+					<span id="bpm-noUiSlider-unit">BPM</span>
+				</div>
+				<div class="toolbar-vertical-separator"></div>
+				<div class="toolbar">
+					<button class="delayed-button holdable waitable play-mode" type="button" data-action="down"><i class="fas fa-chevron-down"></i></button>
+					<button class="delayed-button holdable waitable play-mode" type="button" data-action="again"><i class="fas fa-redo"></i></button>
+					<button class="delayed-button holdable waitable play-mode" type="button" data-action="up"><i class="fas fa-chevron-up"></i></button>
+				</div>
+			</div>
+			<div class="shadow"></div>
+		</div>		
+
+		<div class="sticky-after-space"></div>
+
+
+		<!-- ............. BIAŁA SEKCJA Z PIANINEM I LISTĄ ĆWICZEŃ ............. -->
+
+		<article id="application">
+
+			<section class="segment" id="active-exercises">
+				<header>
+					<h1><i class="fas fa-list-alt"></i> <!-- TYTUŁ SEKCJI --></h1>
+					<h2> <!-- OPIS SEKCJI --> </h2>
+				</header>
+				<ul class="horizontal-scrolling-list" id="exercises-toolbar">
+					<a href="#exercises-picker" id="add-exercises"><!-- INFORMACJA O TYM BY DODAĆ ĆWICZENIA --></a> 			<!-- TO FIX ............... -->
+					<!-- WSZYSTKIE ĆWICZENIA I MELODIE -->
+				</ul>
+			</section>
+
+			<section class="segment" id="vocal-range-selector">
+				<header>
+					<h1><i class="fas fa-microphone"></i> <!-- TYTUŁ SEKCJI --></h1>
+					<h2><!-- OPIS SEKCJI --></h2>
+				</header>
+				<ul id="vocal-types" style="display: none">
+					<li><i class="icon-male"></i></li>
+					<li id="voice-type-bass"><!--TYP GŁOSU--></li>
+					<li id="voice-type-baritone"><!--TYP GŁOSU--></li>
+					<li id="voice-type-tenor"><!--TYP GŁOSU--></li>
+					<li id="voice-type-alto"><!--TYP GŁOSU--></li>
+					<li id="voice-type-soprano"><!--TYP GŁOSU--></li>
+					<li><i class="icon-female"></i></li>													
+				</ul>
+				<div id="piano-range"><div id="vocalRange-noUiSlider" class="noUi-zero-radius"></div></div>
+				<div class="css-piano-wrapper"><div class="css-piano" id="piano"></div></div>
+			</section>
+
+		</article>
+
+
+		<!-- ............. SZARA SEKCJA WYBIERANIA I BUDOWANIA ZESTAWÓW ĆWICZEŃ ............. -->
+
+		<article id="exercises-picker">
+
+			<section class="segment" id="tab-picker">
+				<header>
+					<h1><i class="fas fa-toolbox"></i> <!-- TYTUŁ SEKCJI --></h1>
+					<h2><!-- OPIS SEKCJI --></h2>
+				</header>
+				<nav class="tabs">
+					<ul>
+						<li id="tab-exercise-sets" data-target="#exercise-sets" class="active"><i class="fas fa-layer-group"></i> <!-- TYTUŁ TABA --></li>
+						<li id="tab-exercises" data-target="#exercises"><i class="fas fa-comment-dots"></i> <!-- TYTUŁ TABA --></li>
+						<li id="tab-melodies" data-target="#melodies"><i class="fas fa-music"></i> <!-- TYTUŁ TABA --></li>
+					</ul>
+				</nav>
+			</section>
+
+			<section class="segment" id="exercise-sets">
+				<header>
+					<h2><!-- OPIS SEKCJI --></h2>
+				</header>
+				<div class="search-bar-container-outer"><!-- GŁÓWNY PASEK WYSZUKIWANIA --></div>
+				<div class="picker-content">
+					<header>
+						<h2 id="build-in-sets-header" class="switch-list-title"><!-- OPIS SEKCJI --></h2>
+					</header>
+					<ul id="build-in-sets-list"><!-- LISTY KATEGORI ZE SWITCHAMI DODAJĄCYMI CWICZENIA --></ul>
+					<header>
+						<h2 id="user-sets-header" class="switch-list-title"><!-- OPIS SEKCJI --></h2>
+					</header>
+					<ul id="user-sets-list"><!-- LISTY KATEGORI ZE SWITCHAMI DODAJĄCYMI CWICZENIA --></ul>
+					<div class="extra-buttons">
+						<button class="save-button" id="save-exercise"><i class="fas fa-download"></i><div>Zapisz nowy zestaw</div></button>
+					</div>
+				</div>
+			</section>
+			
+			<section class="segment" id="exercises">
+				<header>
+					<h2><!-- OPIS SEKCJI --></h2>
+				</header>
+				<div class="search-bar-container-outer"><!-- GŁÓWNY PASEK WYSZUKIWANIA --></div>
+				<div class="picker-content"><!-- LISTY KATEGORI ZE SWITCHAMI DODAJĄCYMI CWICZENIA --></div>	
+			</section>
+
+			<section class="segment" id="melodies">
+				<header>
+					<h2><!-- OPIS SEKCJI --></h2>
+				</header>	
+				<div class="search-bar-container-outer"><!-- GŁÓWNY PASEK WYSZUKIWANIA --></div>
+				<div class="picker-content"><!-- LISTY KATEGORII ZE SWITTCHAMI DODAJĄCYMI MELODIE --></div>
+			</section>
+
+		</article>
+
+
+		<!-- ............. NIEBIESKA STREFA DODATKOWYCH USTAWIEŃ ............. -->
+
+		<article class="segment" id="settings">
+			<header>
+				<h1><i class="fas fa-tools"></i> <!-- TYTUŁ SEKCJI --></h1>
+				<h2><!-- OPIS SEKCJI --></h2>
+			</header>
+			<ul class="switch-list"><!-- SWITCHE USTAWIEŃ --></ul>
+		</article>
+	</main>
+
+
+	<!-- ......................... SKRYPTY JS DODATKOWYCH BIBLIOTEK ......................... -->
+
+	<!-- Pollyfills -->
+	<script src="libs/objectKeysPolyfill.js?v38"></script>
+	<!-- jQuery -->
+	<script src="libs/jquery.min.js?v38"></script>
+	<script src="libs/jquery.mousewheel.min.js?v38"></script>
+	<script src="libs/detectmobilebrowser.js?v38"></script>
+	<!-- noUiSlider -->	
+	<script src="libs/nouislider.min.js?v38"></script>
+	<script src="libs/wNumb.min.js?v38"></script>	
+	<!-- Sortable -->	
+	<script src="libs/Sortable.min.js?v38"></script>
+	<!-- Ciasteczka -->
+	<script src="libs/js-cookie.js?v38"></script>
+	<!-- Toast -->
+	<script src="libs/iziToast.min.js?v38"></script>
+	<!-- Alerty -->
+	<script src="libs/sweetalert2.min.js?v38"></script>
+	<script src="libs/promise-polyfill.min.js?v38"></script>
+
+	<!-- ......................... SKRYPTY JS WŁASNYCH BIBLIOTEK ......................... -->
+	
+	<!-- Odtwarzanie dźwięków -->
+	<script src="include/playAudioBuffer.js?v38"></script>
+	<!-- Prosty accordion -->
+	<script src="include/createAccordion.js?v38"></script>
+	<!-- Powiązane guziki -->
+	<script src="include/waitButtons.js?v38"></script>
+	<!-- Pozioma Lista Netflixowa -->
+	<script src="include/horizontalScrollList.js?v38"></script>
+
+	<!-- ......................... SKRYPTY JS STRONY ......................... -->
+
+	<script src="logic.js?v38"></script>
+</body>
+</html>

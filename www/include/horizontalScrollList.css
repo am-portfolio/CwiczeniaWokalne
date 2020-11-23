@@ -1,0 +1,68 @@
+/*
+    Style do scrollowanych list horyzontalnych.
+    Przykłąd:
+
+    <ul class="horizontal-scrolling-list" id="sortable">
+        <li>Item 1</li>
+        <li>Item 1</li>
+        <li>Item 1</li>
+    </ul>
+*/
+
+
+  /*
+  FAJNIE WYTŁUMACZONE FLEXY:
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  */
+
+  /* PARAMETRY */
+
+  .horizontal-scrolling-list{
+    /* Odległosci między obiektami i krawędziami */
+    --horizontal-list-spaceing: 20px;
+  }
+  .horizontal-scrolling-list li{
+    /* Czy elementy mogą się rozciągać lub kurczyć */
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+
+
+
+  /* TYCH RZECZY RACZEJ NIE RUSZAĆ */
+
+  .horizontal-scrolling-list{
+    margin:0px;
+    list-style:none;
+
+    /*Ukrywanie zawartości!*/
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /*Ustawienia flex!*/
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    /*Ustawienia paddingu!*/
+    padding: var(--horizontal-list-spaceing) 0;
+    padding-left: var(--horizontal-list-spaceing);
+  }
+  .horizontal-scrolling-list li{
+    /*Ustawienia marginesu!*/
+    margin-right: var(--horizontal-list-spaceing);
+  }
+  .horizontal-scrolling-list  li:last-child{
+    /*Usunięcie ostatniego marginesu!*/
+    margin-right: 0;
+  }
+  .horizontal-scrolling-list::after{
+    /*Poprawa głupiego paddingu po prawej!*/
+    content: '';
+    min-width: var(--horizontal-list-spaceing);
+    min-height: 1px;
+    visibility: hidden;
+  }
