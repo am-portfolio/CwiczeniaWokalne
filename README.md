@@ -1,7 +1,7 @@
 # Ćwiczenia Wokalne(2018)
 **Autor**: Aron Mandrella
 
-## Interfejs graficzny (wersja wąska)
+## Interfejs graficzny (widok mobilny)
 ![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
 
 ## Opis
