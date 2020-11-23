@@ -814,7 +814,7 @@ $(document).ready(function() {
 		application();
 		
 		//#TODO: Sekcja pomocy
-		$('*[href="#help"').click(function(){
+		$('a[href=#help').click(function(){
 			showToast({
 				theme: 'warning',
 				title: 'TODO',
