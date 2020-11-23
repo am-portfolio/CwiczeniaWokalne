@@ -1,15 +1,15 @@
 # Ćwiczenia Wokalne (2018)
-[![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/GitHub_Thumbnail.png)](https://github.com/am-portfolio/CwiczeniaWokalne)
+[![](https://github.com/aronmandrella/CwiczeniaWokalne/blob/main/GitHub_Thumbnail.png)](https://github.com/aronmandrella/CwiczeniaWokalne)
 
 **Autor**: Aron Mandrella
 
 ## Interfejs graficzny (widok mobilny)
-![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
+![](https://github.com/aronmandrella/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%202.gif)
 
 ## Opis
 Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym instrumencie. Można stworzyć nagranie takiej „rozgrzewki” jednak wówczas wokalista traci kontrolę nad przebiegiem ćwiczenia. W ramach tego projektu postanowiłem stworzyć aplikację mobilną / stronę internetową która automatyzuje proces odgrywania melodii i pozwala zachować pełną kontrolę nad przebiegiem ćwiczenia.
 
-* [🎹 DEMO - Responsywna strona internetowa*](https://am-portfolio.github.io/CwiczeniaWokalne/)
+* [🎹 DEMO - Responsywna strona internetowa*](https://aronmandrella.github.io/CwiczeniaWokalne/)
 
 <sub>\* *Zamiast ‘głosu trenera’ pojawiać będzie się placeholder w postaci krótkiego sygnału.*</sub>
 
@@ -25,4 +25,4 @@ Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym inst
 * Projektowanie i implementacja responsywnych interfejsów użytkownika
 
 ## Responsywnosć
-![](https://github.com/am-portfolio/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%201.gif)
+![](https://github.com/aronmandrella/CwiczeniaWokalne/blob/main/-%20GIFs/Wokalne%20GUI%201.gif)
