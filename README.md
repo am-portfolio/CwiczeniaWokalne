@@ -1,8 +1,8 @@
 # Ćwiczenia Wokalne (2019)
 
-![ThumbnailPNG](https://raw.githubusercontent.com/aronmandrella/CwiczeniaWokalne/main/GitHub_Thumbnail.png)
-
 **Autor**: Aron Mandrella
+
+![ThumbnailPNG](https://raw.githubusercontent.com/aronmandrella/CwiczeniaWokalne/main/GitHub_Thumbnail.png)
 
 ## Interfejs graficzny (widok mobilny)
 ![GUI1-GIF](https://raw.githubusercontent.com/aronmandrella/CwiczeniaWokalne/main/-%20GIFs/Wokalne%20GUI%202.gif)
