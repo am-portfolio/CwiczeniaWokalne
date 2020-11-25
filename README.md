@@ -9,8 +9,6 @@ Wokaliści rozgrzewają się poprzez śpiewanie melodii granych na wybranym inst
 
 [🎹 DEMO* - Responsywna strona internetowa](https://aronmandrella.github.io/CwiczeniaWokalne/)
 
-↩️ [Powrót do portfolio](https://github.com/aronmandrella/portfolio#spis-tre%C5%9Bci)
-
 <sub>\* *Zamiast ‘głosu trenera’ pojawiać będzie się placeholder w postaci krótkiego sygnału.*</sub>
 
 ## 🧰 Wykorzystane technologie i narzędzia
